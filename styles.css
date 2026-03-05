@@ -111,12 +111,39 @@ button:disabled {
   background: #f9fafb;
 }
 
-.output pre {
-  margin: 0.5rem 0 0;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.9rem;
+.ocr-editor {
+  position: relative;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.4rem;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ocr-token {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  color: #111827;
+  background: transparent;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+.ocr-token:hover,
+.ocr-token:focus {
+  outline: none;
+  border-color: #93c5fd;
+  background: rgba(219, 234, 254, 0.45);
+}
+
+.ocr-token[data-corrected="true"] {
+  background: rgba(187, 247, 208, 0.55);
+}
+
+.empty-page {
+  margin: 0;
+  color: #6b7280;
 }
 
 @media (max-width: 900px) {
